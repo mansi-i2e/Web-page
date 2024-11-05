@@ -1,0 +1,317 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans Thai", sans-serif;
+    font-weight: 400;
+}
+
+
+html,
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    color: #666;
+}
+
+
+/* Header Styles */
+.header {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+.nav-link.active {
+    color: #5E35B1;
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #3f3fd2;
+}
+
+.submit-button {
+    background-color: white;
+    color: #3f3fd2;
+    border: 2.3px solid #3f3fd2;
+    padding: 5px 13px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+/* Main Content Styles */
+.container {
+    width: 100%;
+    margin-top: 60px;
+    padding: 0 15px;
+}
+
+.page-title {
+    color: #333;
+    font-size: 35px;
+    margin-top: 15px;
+}
+
+.container h2 {
+    color: #333;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    /* gap: 30px; */
+}
+
+.tab {
+    padding: 10px 20px;
+    color: #666;
+    text-decoration: none;
+    position: relative;
+    font-size: 14px;
+    border-right: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+.tab:last-child {
+    border-right: none;
+}
+
+.tab.active {
+    color: #3f3fd2;
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #3f3fd2;
+}
+
+/* Accordion Styles */
+.accordion {
+    /* border: 1px solid #ddd;
+    border-radius: 8px; */
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    width: 65%;
+}
+
+/* .accordion-item:last-child {
+    border-bottom: none;
+} */
+
+.accordion-header {
+    padding: 15px 20px;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #3f3fd2;
+    font-weight: 600;
+}
+
+.accordion-header:hover {
+    background-color: #f8f8f8;
+}
+
+.accordion-header::after {
+    content: '▼';
+    margin-left: auto;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Hide the checkbox */
+.accordion-toggle {
+    display: none;
+}
+
+.accordion-toggle:checked+.accordion-header::after {
+    transform: rotate(180deg);
+}
+
+/* Show accordion content when checked */
+.accordion-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+
+}
+
+.accordion-toggle:checked+.accordion-header+.accordion-content {
+    padding: 15px 20px;
+    max-height: 200px;
+}
+
+.description {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-link {
+        font-size: 13px;
+    }
+
+    .submit-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-top: 1px solid #ddd;
+    padding: 17px 25px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+}
+
+.footer-year {
+    margin-right: 5px;
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+
+    
+    .nav-menu {
+        display: none;
+    }
+
+    .submit-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .page-title {
+        font-size: 24px;
+    }
+
+    .tabs {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .accordion-item {
+        width: 100%;
+    }
+
+    .footer {
+        font-size: 10px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 18px;
+    }
+
+    .submit-button {
+        font-size: 12px;
+    }
+
+    .tab {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .page-title {
+        font-size: 20px;
+    }
+
+    .footer {
+        padding: 8px 10px;
+    }
+}

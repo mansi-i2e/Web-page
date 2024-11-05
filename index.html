@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+    </style>
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-left">
+                <a href="#" class="logo">Logo</a>
+                <div class="nav-menu">
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Signed Deals</a>
+                    <a href="#" class="nav-link active">Deal Information</a>
+                    <a href="#" class="nav-link">Dashboards</a>
+                    <a href="#" class="nav-link">Contacts</a>
+                    <a href="#" class="nav-link">All News</a>
+                    <a href="#" class="nav-link">Marketplace</a>
+                    <a href="#" class="nav-link">Admin</a>
+                </div>
+            </div>
+            <div class="user-profile">
+                <button class="submit-button">
+                    Submit Your Ideas!
+                </button>
+                <img src="profile.png" alt="User Profile" class="user-avatar">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1 class="page-title">Deal Information</h1>
+
+        <div class="tabs">
+            <a href="#" class="tab">WRDM Funding Sources</a>
+            <a href="#" class="tab">Deal Process</a>
+            <a href="#" class="tab">Governance</a>
+            <a href="#" class="tab">Areas of Interest</a>
+            <a href="#" class="tab active">What to do if...</a>
+        </div>
+        
+
+        <h2>What to do if...</h2>
+        <p class="description">Select the topic below to see what you should do in each scenario</p>
+
+        <div class="accordion">
+            <!-- Accordion Item 1 -->
+            <div class="accordion-item">
+                <input type="checkbox" id="accordion-1" class="accordion-toggle">
+                <label for="accordion-1" class="accordion-header">
+                    ...You are at a meeting and find a potential WRD external opportunity of interest
+                </label>
+                <div class="accordion-content">
+                    Content for first scenario...
+                </div>
+            </div>
+
+            <!-- Accordion Item 2 -->
+            <div class="accordion-item">
+                <input type="checkbox" id="accordion-2" class="accordion-toggle">
+                <label for="accordion-2" class="accordion-header">
+                    ...You want to know WRD's partnering areas of interest
+                </label>
+                <div class="accordion-content">
+                    Content for second scenario...
+                </div>
+            </div>
+
+            <!-- Accordion Item 3 -->
+            <div class="accordion-item">
+                <input type="checkbox" id="accordion-3" class="accordion-toggle">
+                <label for="accordion-3" class="accordion-header">
+                    ...you get approached by a non-employee with a potential WRD external opportunity of interest
+                </label>
+                <div class="accordion-content">
+                    Content for third scenario...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>
+            <span class="footer-year">&copy; 2024</span>
+            <span class="footer-text">i2e Inc. All Rights Reserved.</span>
+        </p>
+    </footer>
+
+</body>
+
+</html>
